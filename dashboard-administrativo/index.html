@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Dashboard administrativo para gestión de ventas"
+    >
+
+    <title>MiDashboard | Ventas</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- BARRA -->
+        <aside
+            class="sidebar"
+            role="navigation"
+            aria-label="Menú principal"
+        >
+
+            <!-- LOGO -->
+            <div class="logo">
+
+                <div class="logo-icon">
+                    
+                </div>
+
+                <div>
+                    <strong>MiDashboard</strong>
+                    <small>administración</small>
+                </div>
+
+            </div>
+
+
+            <!-- PERFIL -->
+            <div class="perfil">
+
+                <label
+                    for="fotoPerfil"
+                    class="foto"
+                    title="Cambiar foto de perfil"
+                >
+
+                    <img
+                        id="imagenPerfil"
+                        src="https://ui-avatars.com/api/?name=Ana+Martinez&background=7c3aed&color=fff"
+                        alt="Foto de perfil de Ana Lucia Martinez"
+                    >
+
+                    <span aria-hidden="true">+</span>
+
+                </label>
+
+                <input
+                    type="file"
+                    id="fotoPerfil"
+                    accept="image/*"
+                    hidden
+                >
+
+                <div>
+
+                    <strong>Ana Lucia Martinez</strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                    <em>
+                        ● En línea
+                    </em>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENÚ -->
+            <nav
+                class="menu"
+                aria-label="Navegación principal"
+            >
+
+                <button
+                    class="menu-btn active"
+                    data-page="inicio"
+                >
+                    <span aria-hidden="true">⏳</span>
+                    Inicio
+                </button>
+
+
+                <button
+                    class="menu-btn"
+                    data-page="productos"
+                >
+                    <span aria-hidden="true">📦</span>
+                    Productos
+                </button>
+
+
+                <button
+                    class="menu-btn"
+                    data-page="ventas"
+                >
+                    <span aria-hidden="true">🛍️</span>
+                    Ventas
+                </button>
+
+
+                <button
+                    class="menu-btn"
+                    data-page="usuarios"
+                >
+                    <span aria-hidden="true">👤</span>
+                    Usuarios
+                </button>
+
+
+                <button
+                    class="menu-btn"
+                    data-page="reportes"
+                >
+                    <span aria-hidden="true">📊</span>
+                    Reportes
+                </button>
+
+
+            </nav>
+
+
+            <!-- OPCIONES -->
+            <div class="menu-bottom">
+
+                <button
+                    id="temaBtn"
+                    aria-label="Cambiar entre modo claro y oscuro"
+                >
+                    🌙 Modo oscuro
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO -->
+        <div class="contenido">
+
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <div class="buscador">
+
+                    <span aria-hidden="true">🔍</span>
+
+                    <input
+                        id="buscar"
+                        type="search"
+                        placeholder="Buscar..."
+                        aria-label="Buscar ventas"
+                    >
+
+                </div>
+
+
+                <div class="acciones">
+
+                    <button
+                        id="notificacionesBtn"
+                        aria-label="Abrir notificaciones"
+                    >
+                        🔔
+                        <b>3</b>
+                    </button>
+
+
+                    <button
+                        id="pantallaBtn"
+                        aria-label="Activar pantalla completa"
+                    >
+                        ⛶
+                    </button>
+
+
+                    <button
+                        id="perfilBtn"
+                        aria-label="Perfil de usuario"
+                    >
+
+                        <img
+                            id="imagenHeader"
+                            src="https://ui-avatars.com/api/?name=Ana+Martinez&background=7c3aed&color=fff"
+                            alt="Foto de perfil de Ana Lucia Martinez"
+                        >
+
+                        <span>
+                            Ana Lucia Martínez
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main role="main">
+
+                <!-- BIENVENIDA -->
+                <section class="bienvenida">
+
+                    <div>
+
+                        <small>
+                            👋 Bienvenido
+                        </small>
+
+                        <h1>
+                            ¡Hola, Ana!
+                        </h1>
+
+                        <p>
+                            Aquí tienes un resumen de como va tu negocio.
+                            
+                        </p>
+
+                    </div>
+
+
+                    <div class="fecha">
+
+                        📅 6 Jun. 2026 - 6 sept. 2026
+
+                    </div>
+
+                </section>
+
+
+                <!-- DASHBOARD -->
+                <div id="dashboard">
+
+
+                    <!-- contenido -->
+                    <section
+                        class="tarjetas"
+                        aria-label="Resumen de ventas"
+                    >
+
+                        <article class="tarjeta">
+
+                            <div class="icono">
+                                💰
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Ventas totales
+                                </small>
+
+                                <h2>
+                                    $14.500.000
+                                </h2>
+
+                                <em>
+                                    ↑ 14% este mes
+                                </em>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="tarjeta">
+
+                            <div class="icono">
+                                📦
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Productos
+                                </small>
+
+                                <h2>
+                                    400
+                                </h2>
+
+                                <em>
+                                    ↑ 9 nuevos
+                                </em>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="tarjeta">
+
+                            <div class="icono">
+                                👤
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Clientes
+                                </small>
+
+                                <h2>
+                                    1.581
+                                </h2>
+
+                                <em>
+                                    ↑ 20% este mes
+                                </em>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="tarjeta">
+
+                            <div class="icono">
+                                🛍️
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    Pedidos
+                                </small>
+
+                                <h2>
+                                    185
+                                </h2>
+
+                                <em>
+                                    ↑ 20 nuevos
+                                </em>
+
+                            </div>
+
+                        </article>
+
+                    </section>
+
+
+                    <!-- GRÁFICOS -->
+                    <section class="grid">
+
+
+                        <!-- GRÁFICO VENTA -->
+                        <article class="panel">
+
+                            <div class="panel-titulo">
+
+                                <div>
+
+                                    <h2>
+                                        Ventas mensuales
+                                    </h2>
+
+                                    <small>
+                                        Comparación del año
+                                    </small>
+
+                                </div>
+
+
+                                <div class="filtros">
+
+                                    <button
+                                        class="filtro active"
+                                    >
+                                        Mes
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="grafico">
+
+                                <div class="barras">
+
+                                    <i
+                                        style="height:0%"
+                                        title="Enero"
+                                    ></i>
+
+                                    <i
+                                        style="height:0%"
+                                        title="Febrero"
+                                    ></i>
+
+                                    <i
+                                        style="height:0%"
+                                        title="Marzo"
+                                    ></i>
+
+                                    <i
+                                        style="height:0%"
+                                        title="Abril"
+                                    ></i>
+
+                                    <i
+                                        style="height:0%"
+                                        title="Mayo"
+                                    ></i>
+
+                                    <i
+                                        style="height:62%"
+                                        title="Junio"
+                                    ></i>
+
+                                    <i
+                                        style="height:53%"
+                                        title="Julio"
+                                    ></i>
+
+                                    <i
+                                        style="height:66%"
+                                        title="Agosto"
+                                    ></i>
+
+                                    <i
+                                        style="height:72%"
+                                        title="Septiembre"
+                                    ></i>
+
+                                    <i
+                                        style="height:0%"
+                                        title="Octubre"
+                                    ></i>
+
+                                    <i
+                                        style="height:0%"
+                                        title="Noviembre"
+                                    ></i>
+
+                                    <i
+                                        style="height:0%"
+                                        title="Diciembre"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="meses">
+
+                                    <span>Ene</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Abr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Ago</span>
+                                    <span>Sep</span>
+                                    <span>Oct</span>
+                                    <span>Nov</span>
+                                    <span>Dic</span>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- DISTRIBUCIÓN -->
+                        <article class="panel">
+
+                            <div class="panel-titulo">
+
+                                <div>
+
+                                    <h2>
+                                        Distribución de ventas
+                                    </h2>
+
+                                    <small>
+                                        Ventas por categoría
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="donut">
+
+                                <strong>
+                                    $14.5M
+                                </strong>
+
+                                <small>
+                                    Total
+                                </small>
+
+                            </div>
+
+
+                            <div class="leyenda">
+
+                                <p>
+                                    <span>
+                                        🟣 Electrodomesticos
+                                    </span>
+
+                                    <b>
+                                        66%
+                                    </b>
+                                </p>
+
+
+                                <p>
+                                    <span>
+                                        🟪 vestuario
+                                    </span>
+
+                                    <b>
+                                        18%
+                                    </b>
+                                </p>
+
+
+                                <p>
+                                    <span>
+                                        🔵 Hogar
+                                    </span>
+
+                                    <b>
+                                        10%
+                                    </b>
+                                </p>
+
+
+                                <p>
+                                    <span>
+                                        🟣 Deportes
+                                    </span>
+
+                                    <b>
+                                        4%
+                                    </b>
+                                </p>
+
+
+                                <p>
+                                    <span>
+                                        🔷 Otros
+                                    </span>
+
+                                    <b>
+                                        2%
+                                    </b>
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </section>
+
+
+                    <!-- TABLA -->
+                    <section class="grid">
+
+
+                        <article class="panel">
+
+                            <div class="panel-titulo">
+
+                                <div>
+
+                                    <h2>
+                                        Últimas ventas
+                                    </h2>
+
+                                    <small>
+                                        Transacciones recientes
+                                    </small>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="tabla">
+
+                                <table>
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>
+                                                Cliente
+                                            </th>
+
+                                            <th>
+                                                Producto
+                                            </th>
+
+                                            <th>
+                                                Valor
+                                            </th>
+
+                                            <th>
+                                                Estado
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody id="tablaVentas">
+
+                                        <tr>
+
+                                            <td>
+                                                Erik Martinez
+                                            </td>
+
+                                            <td>
+                                                Portátil
+                                            </td>
+
+                                            <td>
+                                                $3.250.500
+                                            </td>
+
+                                            <td class="completada">
+                                                Completada
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                Luisa Ayala
+                                            </td>
+
+                                            <td>
+                                                Monitor
+                                            </td>
+
+                                            <td>
+                                                $1.050.000
+                                            </td>
+
+                                            <td class="pendiente">
+                                                Pendiente
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                Belinda Lopez
+                                            </td>
+
+                                            <td>
+                                                Teclado
+                                            </td>
+
+                                            <td>
+                                                $280.500
+                                            </td>
+
+                                            <td class="completada">
+                                                Completada
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>
+                                                Jose Martinez
+                                            </td>
+
+                                            <td>
+                                                Mouse
+                                            </td>
+
+                                            <td>
+                                                $90.000
+                                            </td>
+
+                                            <td class="cancelada">
+                                                Cancelada
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCTOS -->
+                        <article class="panel">
+
+                            <div class="panel-titulo">
+
+                                <div>
+
+                                    <h2>
+                                        Productos más vendidos
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="productos">
+
+                                <p>
+                                    <span>💻 Portátil</span>
+                                    <b>42%</b>
+                                </p>
+
+                                <p>
+                                    <span>🖥️ Monitor</span>
+                                    <b>24%</b>
+                                </p>
+
+                                <p>
+                                    <span>⌨️ Teclado</span>
+                                    <b>15%</b>
+                                </p>
+
+                                <p>
+                                    <span>🖱️ Mouse</span>
+                                    <b>14%</b>
+                                </p>
+
+                            <p>
+                                    <span>🎧 Audífonos</span>
+                                    <b>5%</b>
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </section>
+
+                </div>
+
+
+                <!-- OTRAS PÁGINAS -->
+                <section
+                    id="otraPagina"
+                    class="otra-pagina"
+                    hidden
+                >
+
+                    <article class="panel">
+
+                        <h2 id="tituloPagina">
+                            Sección
+                        </h2>
+
+                        <p id="descripcionPagina">
+                            Información
+                        </p>
+
+
+                        <div
+                            id="contenidoPagina"
+                            class="contenido-pagina"
+                        ></div>
+
+                    </article>
+
+                </section>
+
+            </main>
+
+
+        </div>
+
+    </div>
+
+
+    <!--NOTIFICACIONES -->
+    <div
+        id="notificaciones"
+        class="popup"
+        role="dialog"
+        aria-label="Notificaciones"
+    >
+
+        <h3>
+            Notificaciones
+        </h3>
+
+        <p>
+            🟢 Registro de nuevas ventas
+        </p>
+
+        <p>
+            🟠 Producto con poco stock
+        </p>
+
+        <p>
+            🟣 Nuevo usuario registrado
+        </p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
